@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //Software de mercearia
+            //Cadeira e sofa
+
+            //procedural
+            let cadeiras = Array()
+
+            adicionarCadeira(4, false, 'azul')
+            adicionarCadeira(1, true, 'vermelha')
+
+            console.log(cadeiras)
+
+            function adicionarCadeira(qtdePernas, isGiratoria, cor){
+                let cadeira = Array()
+
+                cadeira['qtdePernas'] = qtdePernas
+                cadeira['giratoria'] = isGiratoria
+                cadeira['cor'] = cor
+
+                cadeiras.push(cadeira)
+            }
+
+            function girarCadeira(index){
+                let message = (cadeiras[index]['isGiratoria'] === true) ? 'girou' : 'cadeira não é giratoria'
+                console.log(message)
+            }
+
+            girarCadeira(1)
+
+            //Orientação a Objetos
+            class Cadeira {
+
+                constructor(qtdPernas, isGiratoria, cor){
+                    this.qtdPernas = qtdPernas
+                    this.isGiratoria = isGiratoria
+                    this.cor = cor
+                }
+
+                girarCadeira(){
+                    let message = (this.isGiratoria === true) ? 'girou' : 'cadeira não é giratoria'
+                    console.log(message)
+                }
+            }
+
+            cadeiras.push(new Cadeira(4, false, 'azul'), new Cadeira(1, true, 'verde'))
+
+            console.log(cadeiras)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

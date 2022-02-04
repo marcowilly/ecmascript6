@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            class Aninal{
+
+                constructor(cor, tamanho, peso){
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir(){
+                    console.log(`O animal está dormindo`)
+                }
+            }
+
+            class Passaro extends Aninal {
+
+                constructor(cor, tamanho, bico, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar(){
+                    console.log(`O passaro está voando`)
+                }
+
+                dormir(){
+                    console.log(`O passaro está dormindo`)
+                }
+            }
+
+            class Papagaio extends Passaro {
+
+                constructor(sabeFalar, cor, tamanho, bico, peso){
+                    super(cor, tamanho, bico, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar(){
+                    console.log(`O papagaio esta falando`)
+                }
+
+                voar(){
+                    console.log(`O papagaio está voando`)
+                }
+
+                dormir(){
+                    console.log(`O papagaio está dormindo`)
+                }
+            }
+
+            class Avestruz extends Passaro{
+
+                constructor(cor, tamanho, bico, peso){
+                    super(cor, tamanho, bico, peso)
+                }
+
+                enterrarCabeca(){
+                    console.log(`O avestruz enterrou sua cabeça`)
+                }
+
+                voar(){
+                    console.log(`O avestruz não sabe voar`)
+                }
+            }
+
+            let papagaio = new Papagaio(true, 'Branco', 15, 'Medio', 3)
+            let avestruz = new Avestruz('Marrom e branco','Grande', 'Grande', 150000)
+
+            papagaio.voar()
+            avestruz.enterrarCabeca()
+            avestruz.voar()
+
+            console.log(papagaio)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

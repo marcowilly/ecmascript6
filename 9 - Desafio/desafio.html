@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            class Poutrona{
+
+                constructor(cor, qtdLugares, isReclinavel){
+                    this.cor = cor
+                    this.qtdLugares = qtdLugares
+                    this.isReclinavel = isReclinavel
+                }
+
+                getCor(){
+                    return cor
+                }
+
+                getQtdLugares(){
+                    return qtdLugares
+                }
+
+                isReclinavel(){
+                    return isReclinavel
+                }
+
+                reclinar(){
+                    if(isReclinavel === true){
+                        console.log('Sofá reclinado')
+                    }else{
+                        console.log('Sofá não é reclinavel')
+                    }
+                }
+
+            }
+
+            var poutrona = new Poutrona('Cinza', 3, false)
+            var poutrona1 = new Poutrona('Azul', 1, true)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

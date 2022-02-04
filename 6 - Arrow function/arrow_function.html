@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //Antiga
+            let quadrado = function(x = 0){
+                return x * x
+            }
+            
+            //Nova
+            quadrado = (x = 0) => {
+                return x * x
+            }
+
+            quadrado = (x = 0) => x * x //Return implicito
+
+            document.write(`${quadrado()} </br>`)
+
+            let parOuImpar = (num) => (num % 2 === 0) ? 'par' : 'impar'
+
+            document.write(parOuImpar(7))
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

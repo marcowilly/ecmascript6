@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            class Aninal{
+
+                constructor(cor, tamanho, peso){
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir(){
+                    console.log(`O animal está dormindo`)
+                }
+            }
+
+            class Cachorro extends Aninal {
+                
+                constructor(cor, tamanho, orelhas, peso){
+                    super(cor, tamanho, peso)
+                    this.orelhas = orelhas
+                }
+
+                correr(){
+                    console.log(`O cachorro está correndo`)
+                }
+
+                rosnar(){
+                    console.log(`O cachorro está rosnando`)
+                }
+
+                dormir(){
+                    console.log(`O cachorro está dormindo`)
+                }
+            }
+
+            class Passaro extends Aninal {
+                
+                constructor(cor, tamanho, bico, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar(){
+                    console.log(`O passaro está voando`)
+                }
+
+                dormir(){
+                    console.log(`O passaro está dormindo`)
+                }
+            }
+
+            class Papagaio extends Passaro {
+
+                constructor(sabeFalar, cor, tamanho, bico, peso){
+                    super(cor, tamanho, bico, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar(){
+                    console.log(`O papagaio esta falando`)
+                }
+
+                voar(){
+                    console.log(`O papagaio está voando`)
+                }
+
+                dormir(){
+                    console.log(`O papagaio está dormindo`)
+                }
+            }
+
+            let cachorro = new Cachorro('Branco', 30, 'Grandes', 20)
+            let passaro = new Passaro('Amarelo', 10, 'Pequeno', 2)
+            let papagaio = new Papagaio(true, 'Branco', 15, 'Medio', 3)
+            
+            cachorro.dormir()
+            passaro.dormir()
+            papagaio.dormir()
+
+            console.log(cachorro)
+            console.log(passaro)
+            console.log(papagaio)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

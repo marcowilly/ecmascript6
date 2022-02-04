@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /**
+             * Abstração
+             *  - Entidade = Objeto do mundo real
+             *  - Identidade = Cada entidade tem sua identidade
+             *  - Caracteristicas = Atributos {Ex: Pessoa - corDePele, tamanhoCabelo}
+             *  - Açoes = Metodos {Ex: Pessoa - anda, respira}
+             */
+            class ContaBancaria {
+
+                constructor(){
+                    this.agencia = 1075
+                    this.numeroConta = 8351125
+                    this.saldo = 50
+                    this.limite = 450
+                }
+
+                depositar(valorDeposito){
+                    this.saldo += valorDeposito
+                    return this
+                }
+
+                sacar(valorSaque){
+                    if(valorSaque <= this.saldo){
+                        this.saldo -= valorSaque
+                    }
+                    return this
+                }
+
+                consultarSaldo(){
+                    return this.saldo
+                }
+            }
+
+            let conta = new ContaBancaria()
+            document.write(conta.consultarSaldo()+'<br>')
+            document.write(conta.depositar(450).consultarSaldo()+'<br>')
+            document.write(conta.sacar(200).consultarSaldo())
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

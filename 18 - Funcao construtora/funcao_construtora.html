@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let Carro = function(cor, modelo, velocidadeAtual, velocidadeMaxima){
+                this.cor = cor
+                this.modelo = modelo
+                this.velocidadeAtual = velocidadeAtual
+                this.velocidadeMaxima = velocidadeMaxima
+
+                this.acelerar = function(){
+                    this.setVelocidadeAtual(this.getVelocidadeAtual() + 10)
+                }
+
+                this.getVelocidadeAtual = function(){
+                    return this.velocidadeAtual
+                }
+                
+                this.setVelocidadeAtual = function(velocidadeAtual){
+                    if(velocidadeAtual <= velocidadeMaxima){
+                        this.velocidadeAtual = velocidadeAtual
+                    }
+                }
+            }
+
+            let carro = new Carro('Amarelo', 'Chevette', 0, 180)
+            carro.acelerar()
+            console.log(`A velocidade atual é: ${carro.getVelocidadeAtual()} Km/h`)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

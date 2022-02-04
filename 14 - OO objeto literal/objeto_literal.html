@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            class Produto{
+                
+                constructor(descricao, preco){
+                    this.descricao = descricao
+                    this.preco = descricao
+                }
+
+                verDescricao(){
+                    console.log(`${this.descricao} por ${this.preco}`)
+                }
+            }
+
+            let produto = new Produto('Notebook', 3999.9)
+            produto.verDescricao()
+
+            //------------------------------------------------------
+
+            let produtoLiteral = {
+                descricao: 'Geladeira',
+                preco: 2500,
+                verDescricao: function(){
+                    console.log(`${this.descricao} por ${this.preco}`)
+                }
+            }
+
+            //-------------------------------------------------------
+            /*
+                formulário -> servidor
+                    recuper dados e monta um objeto literal
+                        obj literal -> JSON -> HTTP -> Server -> Armazena
+            */
+
+            produtoLiteral.verDescricao()
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

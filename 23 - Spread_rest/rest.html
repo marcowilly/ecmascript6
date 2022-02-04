@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            //Agrupar
+            
+            function soma(...args){
+                let resultado = 0
+                args.forEach(v => resultado += v)
+                return resultado
+            }
+
+            console.log(soma(3,8,5,7))
+
+            function multiplicacao(m, ...args){
+                let resultado = 0
+                args.forEach(v => resultado += m * v)
+                return resultado
+            }
+
+            console.log(multiplicacao(5,7,12,3,49))
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
